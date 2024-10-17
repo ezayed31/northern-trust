@@ -33,3 +33,41 @@ a,
     padding: 0 2rem;
   }
 }
+
+.dashboard-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px; /* Add a gap between the columns */
+}
+
+.live-fx,
+.historical-chart {
+  flex: 1; /* Allow them to take equal space */
+  min-width: 300px; /* Set a minimum width to prevent them from collapsing */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #333;
+  box-sizing: border-box;
+}
+
+.historical-chart {
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .dashboard-content {
+    flex-direction: column;
+  }
+
+  .live-fx,
+  .historical-chart {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
