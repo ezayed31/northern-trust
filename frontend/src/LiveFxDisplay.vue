@@ -1,6 +1,6 @@
 <template>
   <div class="live-fx-display">
-    <h2>Live Bid/Ask Prices for {{ pair }}</h2>
+    <h2>Live Prices for {{ pair }}</h2>
     <div v-if="fxData">
       <p>Bid: {{ fxData.bid }}</p>
       <p>Ask: {{ fxData.ask }}</p>
@@ -45,7 +45,6 @@ export default {
 <style scoped>
 .live-fx-display {
   margin-top: 20px;
-  border: 1px solid #ddd;
   padding: 20px;
 }
 </style>
