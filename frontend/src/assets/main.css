@@ -29,37 +29,40 @@ h1 {
   flex-direction: column;
   padding: 20px;
   gap: 20px;
+  overflow: hidden;
 }
 
 /* Top row with three tiles */
 .top-row {
   display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
+  justify-content: center;
   gap: 20px;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
 }
 
-/* Tile styling */
+/* Dynamic tiles */
 .tile {
   border: 1px solid #ccc;
   border-radius: 10px;
   background-color: #333;
   padding: 20px;
   box-sizing: border-box;
-}
-
-.small {
-  flex: 0 0 325px; /* Fixed width for each small tile */
-  height: 300px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+/* Small tiles with dynamic sizing */
+.small {
+  flex: 1 1 30%; /* Grow, shrink, and take up 30% of the parent */
+  min-width: 250px; /* Minimum width to prevent the tiles from becoming too small */
+  height: auto; /* Height will adjust based on content */
+}
+
 /* Large tile for the bottom row */
 .large {
-  width: 100%;
-  height: 400px; /* Set height for the larger bottom tile */
+  width: 100%; /* Full width */
+  flex-grow: 1; /* Grow to fill the remaining vertical space */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -67,7 +70,7 @@ h1 {
 
 /* Bottom row containing the large tile */
 .bottom-row {
-  flex: 1;
+  flex-grow: 1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -80,7 +83,6 @@ h1 {
 
   .small {
     width: 100%;
-    margin-bottom: 20px;
   }
 
   .large {
