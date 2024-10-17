@@ -32,22 +32,12 @@ public class FxRateController {
         }
     }
 
-//    @GetMapping("/enriched")
-//    public String getEnrichedRate(@RequestParam String baseCurrency,
-//                                  @RequestParam String targetCurrency) {
-//        return fxRateService.getEnrichedRate(baseCurrency, targetCurrency);
-//    }
-//
-//    @GetMapping("/history")
-//    public String getHistoricalRates(@RequestParam String baseCurrency,
-//                                     @RequestParam int year,
-//                                     @RequestParam int month,
-//                                     @RequestParam int day,
-//                                     @RequestParam(required = false) Double amount) {
-//        if (amount != null) {
-//            return fxRateService.getHistoricalRatesWithAmount(baseCurrency, year, month, day, amount);
-//        } else {
-//            return fxRateService.getHistoricalRates(baseCurrency, year, month, day);
-//        }
-//    }
+    @GetMapping("/timeseries")
+    public String getFxRates(@RequestParam String function,
+                             @RequestParam String fromSymbol,
+                             @RequestParam String toSymbol,
+                             @RequestParam(defaultValue = "compact") String outputSize,
+                             @RequestParam(defaultValue = "json") String dataType) {
+        return fxRateService.getFxRates(function, fromSymbol, toSymbol, outputSize, dataType);
+    }
 }

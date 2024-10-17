@@ -15,6 +15,12 @@ public class FxRateService {
     @Value("${exchangerate.api.url}")
     private String apiUrl;
 
+    @Value("${alphavantage.api.key}")
+    private String api2Key;
+
+    @Value("${alphavantage.api.url}")
+    private String api2Url;
+
     private final RestTemplate restTemplate;
 
     public FxRateService(RestTemplate restTemplate) {
@@ -54,45 +60,36 @@ public class FxRateService {
         }
     }
 
-//    public String getEnrichedRate(String baseCurrency, String targetCurrency) {
-//        String url = apiUrl + apiKey + "/enriched/" + baseCurrency + "/" + targetCurrency;
-//
-//        try {
-//            return restTemplate.getForObject(url, String.class);
-//        } catch (HttpClientErrorException e) {
-//            if (e.getStatusCode() == HttpStatus.NOT_FOUND) {
-//                return "{\"error\": \"Currency pair not found or invalid.\"}";
-//            } else {
-//                return "{\"error\": \"An error occurred while fetching the enriched data.\"}";
-//            }
-//        }
-//    }
-//
-//    public String getHistoricalRates(String baseCurrency, int year, int month, int day) {
-//        String url = apiUrl + apiKey + "/history/" + baseCurrency + "/" + year + "/" + month + "/" + day;
-//
-//        try {
-//            return restTemplate.getForObject(url, String.class);
-//        } catch (HttpClientErrorException e) {
-//            if (e.getStatusCode() == HttpStatus.NOT_FOUND) {
-//                return "{\"error\": \"Historical data not found or invalid date.\"}";
-//            } else {
-//                return "{\"error\": \"An error occurred while fetching historical data.\"}";
-//            }
-//        }
-//    }
-//
-//    public String getHistoricalRatesWithAmount(String baseCurrency, int year, int month, int day, double amount) {
-//        String url = apiUrl + apiKey + "/history/" + baseCurrency + "/" + year + "/" + month + "/" + day + "/" + amount;
-//
-//        try {
-//            return restTemplate.getForObject(url, String.class);
-//        } catch (HttpClientErrorException e) {
-//            if (e.getStatusCode() == HttpStatus.NOT_FOUND) {
-//                return "{\"error\": \"Historical data or amount not found or invalid.\"}";
-//            } else {
-//                return "{\"error\": \"An error occurred while fetching historical data and conversion.\"}";
-//            }
-//        }
-//    }
+    public String getEnrichedRate(String baseCurrency, String targetCurrency) {
+        String url = apiUrl + apiKey + "/enriched/" + baseCurrency + "/" + targetCurrency;
+
+        try {
+            return restTemplate.getForObject(url, String.class);
+        } catch (HttpClientErrorException e) {
+            if (e.getStatusCode() == HttpStatus.NOT_FOUND) {
+                return "{\"error\": \"Currency pair not found or invalid.\"}";
+            } else {
+                return "{\"error\": \"An error occurred while fetching the enriched data.\"}";
+            }
+        }
+    }
+
+    public String getFxRates(String function, String fromSymbol, String toSymbol, String outputSize, String dataType) {
+        String url = api2Url + "/query?function=" + function
+                + "&from_symbol=" + fromSymbol
+                + "&to_symbol=" + toSymbol
+                + "&outputsize=" + outputSize
+                + "&datatype=" + dataType
+                + "&apikey=" + api2Key;
+
+        try {
+            return restTemplate.getForObject(url, String.class);
+        } catch (HttpClientErrorException e) {
+            if (e.getStatusCode() == HttpStatus.NOT_FOUND) {
+                return "{\"error\": \"FX data not found for the specified currency pair.\"}";
+            } else {
+                return "{\"error\": \"An error occurred while fetching the FX data.\"}";
+            }
+        }
+    }
 }
