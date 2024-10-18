@@ -14,11 +14,11 @@
             @input="convertCurrency"
             placeholder="Enter amount"
           />
-          <span class="currency-label">{{ baseCurrency }}</span>
+          <span class="currency-label1">{{ baseCurrency }}</span>
         </div>
         <div class="converted-amount">
           <span>{{ convertedAmount }}</span>
-          <span class="currency-label">{{ targetCurrency }}</span>
+          <span class="currency-label2">{{ targetCurrency }}</span>
         </div>
       </div>
     </div>
@@ -130,9 +130,14 @@ h2 {
   border-radius: 5px;
 }
 
-.currency-label {
+.currency-label1 {
   font-size: 1rem;
   color: #f5f5f5; /* A complementary darker green for labels to maintain aesthetic balance */
+}
+
+.currency-label2 {
+  font-size: 1rem;
+  color: #3E6F50; /* A complementary darker green for labels to maintain aesthetic balance */
 }
 </style>
 
