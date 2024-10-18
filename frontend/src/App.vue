@@ -2,6 +2,7 @@
   <div id="app">
     <header class="header">
       <h1>World Link Bank FX Trade</h1>
+      <img src="@/assets/logo2.jpg" alt="World Link Bank Logo" style="height: 50px; position: absolute; top: 24px; right: 32px; scale: 1.5">
     </header>
     <main class="dashboard-content">
       <div class="currencypairselector">
