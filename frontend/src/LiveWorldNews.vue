@@ -23,7 +23,7 @@
     data() {
       return {
         news: [],
-        apiKey: 'YOUR_NEWS_API_KEY', // Replace with your actual API key
+        apiKey: '39092d6a3fc94776832f5ff41f2b1e17',
       };
     },
     mounted() {
