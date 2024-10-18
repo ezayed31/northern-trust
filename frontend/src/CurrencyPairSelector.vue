@@ -202,22 +202,9 @@ export default {
   },
   methods: {
     async fetchData() {
+      const selectedPair = `${this.selectedCurrency}/${this.targetCurrency}`;
+      this.$emit('pairSelected', selectedPair);
       try {
-        // Fetch live rates
-        const liveRatesResponse = await axios.get('http://localhost:8080/api/fxrates/live', {
-          params: { baseCurrency: this.selectedCurrency },
-        });
-        const liveRates = liveRatesResponse.data;
-
-        // Fetch pair rate
-        const pairRateResponse = await axios.get('http://localhost:8080/api/fxrates/pair', {
-          params: {
-            baseCurrency: this.selectedCurrency,
-            targetCurrency: this.targetCurrency,
-          },
-        });
-        const pairRate = pairRateResponse.data;
-
         // Fetch time series (FX_DAILY as default)
         const timeSeriesResponse = await axios.get('http://localhost:8080/api/fxrates/timeseries', {
           params: {
@@ -232,8 +219,6 @@ export default {
 
         // Update the fxData object with the responses
         this.fxData = {
-          live: liveRates,
-          pair: pairRate,
           timeSeries: timeSeries,
         };
       } catch (error) {

@@ -1,4 +1,3 @@
-import './assets/main.css'
 <template>
   <div id="app">
     <header class="header">
@@ -11,8 +10,8 @@ import './assets/main.css'
       <div class="top-row">
         <div class="tile small">
           <CurrencyConverter
-            :baseCurrency="selectedBaseCurrency"
-            :targetCurrency="selectedTargetCurrency"
+              :baseCurrency="selectedBaseCurrency"
+              :targetCurrency="selectedTargetCurrency"
           />
         </div>
         <div class="tile small">
@@ -20,8 +19,6 @@ import './assets/main.css'
         </div>
         <div class="tile small">
           <LiveWorldNews/>
-        </div>
-        <div class="tile small">
         </div>
       </div>
       <div class="bottom-row">
@@ -43,7 +40,6 @@ import CurrencyConverter from './CurrencyConverter.vue';
 export default {
   data() {
     return {
-      currencyPairs: ['USD/EUR', 'USD/JPY', 'GBP/USD', 'AUD/USD', 'EUR/GBP', 'USD/CHF'],
       selectedPair: 'USD/EUR',
       selectedBaseCurrency: 'USD',
       selectedTargetCurrency: 'EUR',
@@ -64,4 +60,3 @@ export default {
   },
 };
 </script>
-
