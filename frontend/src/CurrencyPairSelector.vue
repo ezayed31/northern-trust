@@ -17,11 +17,11 @@
     <button class="fetch-button" @click="fetchData">Fetch Data</button>
 
     <!-- Display fetched data -->
-    <div v-if="fxData">
-      <h3>Live Rates: {{ fxData.live }}</h3>
-      <h3>Pair Rate: {{ fxData.pair }}</h3>
-      <h3>Time Series: {{ fxData.timeSeries }}</h3>
-    </div>
+<!--    <div v-if="fxData">-->
+<!--      <h3>Live Rates: {{ fxData.live }}</h3>-->
+<!--      <h3>Pair Rate: {{ fxData.pair }}</h3>-->
+<!--      <h3>Time Series: {{ fxData.timeSeries }}</h3>-->
+<!--    </div>-->
   </div>
 </template>
 
