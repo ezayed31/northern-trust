@@ -87,14 +87,17 @@
 
 <style scoped>
 .fx-display {
-  padding: 35px;
+  padding: 10px;
   background-color: #3E6F50; /* Softer forest green for the main background */
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   color: #F5FFFA; /* Mint cream for text */
   width: 100%;
+  height: 100%;
   box-sizing: border-box;
   text-align: center;
+  justify-content: center;
+  align-content: center;
 }
 
 h2 {

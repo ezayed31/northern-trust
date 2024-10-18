@@ -77,7 +77,7 @@ h2 {
 
 .news-headline {
   font-size: 1rem;
-  color: #FFFFFF; /* White for headlines, maintaining high contrast */
+  color: #F5FFFA; /* White for headlines, maintaining high contrast */
   text-decoration: none;
   transition: color 0.3s;
   display: block;

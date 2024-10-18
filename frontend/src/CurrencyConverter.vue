@@ -70,12 +70,15 @@
 
 <style scoped>
 .converter-container {
-  padding: 20px;
-  background-color: #3E6F50; /* A softer, more pleasant shade of forest green */
+  padding: 10px;
+  background-color: #3E6F50; /* Softer forest green for the main background */
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  color: #fff;
+  color: #F5FFFA; /* Mint cream for text */
+  justify-content: center;
+  align-content: center;
   width: 100%;
+  height: 100%;
   box-sizing: border-box;
 }
 
@@ -87,7 +90,7 @@ h2 {
 
 .conversion-details {
   margin-bottom: 20px;
-  font-size: 1rem;
+  font-size: 1.25rem;
   color: #F5FFFA; /* Mint cream, a very light and soothing color for text */
   text-align: center;
 }
@@ -129,7 +132,7 @@ h2 {
 
 .currency-label {
   font-size: 1rem;
-  color: #3E6F50; /* A complementary darker green for labels to maintain aesthetic balance */
+  color: #f5f5f5; /* A complementary darker green for labels to maintain aesthetic balance */
 }
 </style>
 
