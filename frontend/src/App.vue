@@ -16,11 +16,9 @@ import './assets/main.css'
           <LiveFxDisplay :pair="selectedPair" />
         </div>
         <div class="tile small">
-          <p>placeholder</p>
+          <LiveWorldNews/>
         </div>
         <div class="tile small">
-          <!-- Add any additional component or information here -->
-          <p>palceholder</p>
         </div>
       </div>
       <div class="bottom-row">
@@ -36,6 +34,7 @@ import './assets/main.css'
 import CurrencyPairSelector from '@/CurrencyPairSelector.vue';
 import LiveFxDisplay from '@/LiveFxDisplay.vue';
 import HistoricalChart from '@/HistoricalChart.vue';
+import LiveWorldNews from './LiveWorldNews.vue';
 
 export default {
   data() {
@@ -53,6 +52,7 @@ export default {
     CurrencyPairSelector,
     LiveFxDisplay,
     HistoricalChart,
+    LiveWorldNews,
   },
 };
 </script>
