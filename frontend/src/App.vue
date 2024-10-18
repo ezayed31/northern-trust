@@ -10,7 +10,10 @@ import './assets/main.css'
       </div>
       <div class="top-row">
         <div class="tile small">
-          
+          <CurrencyConverter
+            :baseCurrency="selectedBaseCurrency"
+            :targetCurrency="selectedTargetCurrency"
+          />
         </div>
         <div class="tile small">
           <LiveFxDisplay :pair="selectedPair" />
@@ -35,6 +38,7 @@ import CurrencyPairSelector from '@/CurrencyPairSelector.vue';
 import LiveFxDisplay from '@/LiveFxDisplay.vue';
 import HistoricalChart from '@/HistoricalChart.vue';
 import LiveWorldNews from './LiveWorldNews.vue';
+import CurrencyConverter from './CurrencyConverter.vue';
 
 export default {
   data() {
@@ -53,6 +57,7 @@ export default {
     LiveFxDisplay,
     HistoricalChart,
     LiveWorldNews,
+    CurrencyConverter,
   },
 };
 </script>
