@@ -23,7 +23,7 @@
     data() {
       return {
         news: [],
-        apiKey: '39092d6a3fc94776832f5ff41f2b1e17',
+        apiKey: '436787e80fee4814ba414c335fd74e9f',
       };
     },
     mounted() {
