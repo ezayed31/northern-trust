@@ -1,6 +1,6 @@
 <template>
     <div class="news-container">
-      <h2>Forex News</h2>
+      <h2>FX News</h2>
       <div v-if="news.length">
         <ul class="news-list">
           <li v-for="(article, index) in news" :key="index" class="news-item">
@@ -62,6 +62,7 @@
 h2 {
   font-size: 1.5rem;
   margin-bottom: 20px;
+  text-align: center;
   color: #F5FFFA; /* Mint cream for headings, adding a touch of lightness */
 }
 

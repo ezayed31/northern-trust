@@ -85,6 +85,7 @@
 h2 {
   font-size: 1.5rem;
   margin-bottom: 20px;
+  text-align: center;
   color: #f5f5f5; /* Keeping it slightly off-white for the heading */
 }
 
