@@ -2,7 +2,7 @@ import './assets/main.css'
 <template>
   <div id="app">
     <header class="header">
-      <h1>Dashboard</h1>
+      <h1>FX Currency Dashboard</h1>
     </header>
     <main class="dashboard-content">
       <div class="currencypairselector">
@@ -45,11 +45,14 @@ export default {
     return {
       currencyPairs: ['USD/EUR', 'USD/JPY', 'GBP/USD', 'AUD/USD', 'EUR/GBP', 'USD/CHF'],
       selectedPair: 'USD/JPY',
+      selectedBaseCurrency: 'USD',
+      selectedTargetCurrency: 'EUR',
     };
   },
   methods: {
     setSelectedPair(pair) {
       this.selectedPair = pair;
+      [this.selectedBaseCurrency, this.selectedTargetCurrency] = pair.split('/');
     }
   },
   components: {

@@ -15,6 +15,8 @@
   </template>
   
   <script>
+  import axios from 'axios';
+  
   export default {
     props: ['pair'],
     data() {
@@ -29,48 +31,70 @@
     },
     mounted() {
       this.fetchPrices();
-      setInterval(this.fetchPrices, 1000); //updates every one second 
+      setInterval(this.fetchPrices, 1000); // Update every 5 seconds
     },
     methods: {
-      fetchPrices() {
-        // Save the current prices as the previous prices before fetching new ones
+      async fetchPrices() {
+        if (!this.pair) return;
+  
+        const [baseCurrency, targetCurrency] = this.pair.split('/');
+        try {
+          // Fetch live FX data from an API
+          // Replace this with your actual API endpoint and API key
+          const response = await axios.get(
+            `https://api.exchangerate-api.com/v4/latest/${baseCurrency}`
+          );
+  
+          const rate = response.data.rates[targetCurrency];
+  
+          if (rate) {
+            this.updatePrices(rate);
+          } else {
+            console.error('Rate not available for this pair');
+          }
+        } catch (error) {
+          console.error('Error fetching FX rates:', error);
+        }
+      },
+      updatePrices(rate) {
+        // Save the current prices as the previous prices
         this.previousBidPrice = this.bidPrice;
         this.previousAskPrice = this.askPrice;
   
-        // Replace this with your actual API call to fetch live bid/ask prices
-        const newBidPrice = (149.500 + Math.random() * 0.05).toFixed(3);
-        const newAskPrice = (149.510 + Math.random() * 0.05).toFixed(3);
+        // For simplicity, let's assume bid and ask prices are close to the rate
+        this.bidPrice = (rate - 0.001).toFixed(3);
+        this.askPrice = (rate + 0.001).toFixed(3);
   
-        // Update the bid and ask prices
-        this.bidPrice = newBidPrice;
-        this.askPrice = newAskPrice;
-  
-        // Determine if the new prices are higher or lower than the previous prices
+        // Determine if the prices are up or down
         if (this.previousBidPrice !== null) {
-          this.bidUp = parseFloat(newBidPrice) >= parseFloat(this.previousBidPrice);
+          this.bidUp = parseFloat(this.bidPrice) >= parseFloat(this.previousBidPrice);
         }
         if (this.previousAskPrice !== null) {
-          this.askUp = parseFloat(newAskPrice) >= parseFloat(this.previousAskPrice);
+          this.askUp = parseFloat(this.askPrice) >= parseFloat(this.previousAskPrice);
         }
+      },
+    },
+    watch: {
+      pair: {
+        handler() {
+          this.fetchPrices();
+        },
+        immediate: true,
       },
     },
   };
   </script>
   
   <style scoped>
-  .live-fx-display {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
+  .fx-display {
     padding: 20px;
     background-color: #2c3e50;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     color: #fff;
-    text-align: center;
+    width: 100%;
     box-sizing: border-box;
+    text-align: center;
   }
   
   h2 {
@@ -83,7 +107,6 @@
     display: flex;
     gap: 20px;
     justify-content: center;
-    width: 100%;
   }
   
   .price-box {
@@ -91,10 +114,10 @@
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-width: 100px;
   }
   
   h3 {
@@ -108,7 +131,7 @@
     margin: 0;
     font-weight: bold;
     color: #f5f5f5;
-    transition: color 0.3s ease; /* Smooth transition when the color changes */
+    transition: color 0.3s ease;
   }
   
   .price-up {
