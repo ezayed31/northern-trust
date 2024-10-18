@@ -144,16 +144,24 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center; /* Centers the content */
+  background-color: #3E6F50; /* Mint cream background for the entire chart container */
+  color: #4F7942; /* Softer forest green for text */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .currency-pair-title {
   font-size: 1.5rem; /* Adjust the size as needed */
   margin-bottom: 20px;
+  color: #F5FFFA; /* Softer forest green for titles */
 }
 
 .chart-container {
   width: 100%; /* Full width */
   height: 500px; /* Adjust the height of the chart */
+  background-color: #F5FFFA; /* Pure white background for the chart canvas to ensure clarity */
+  border: 1px solid #3E6F50; /* Border color to gently frame the chart */
 }
 
 canvas {

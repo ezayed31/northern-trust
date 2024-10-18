@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <header class="header">
-      <h1>FX Currency Dashboard</h1>
+      <h1>World Link Bank FX Trade</h1>
     </header>
     <main class="dashboard-content">
       <div class="currencypairselector">

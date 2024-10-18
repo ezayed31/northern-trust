@@ -1,5 +1,5 @@
 <template>
-    <div class="live-fx-display">
+    <div class="fx-display">
       <h2>Live Prices for {{ pair }}</h2>
       <div class="prices-container">
         <div class="price-box">
@@ -84,62 +84,63 @@
     },
   };
   </script>
-  
-  <style scoped>
-  .fx-display {
-    padding: 20px;
-    background-color: #2c3e50;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    color: #fff;
-    width: 100%;
-    box-sizing: border-box;
-    text-align: center;
-  }
-  
-  h2 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    color: #f5f5f5;
-  }
-  
-  .prices-container {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-  }
-  
-  .price-box {
-    background-color: #3a4a5c;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-width: 100px;
-  }
-  
-  h3 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-    color: #9ec1e6;
-  }
-  
-  p {
-    font-size: 1.8rem;
-    margin: 0;
-    font-weight: bold;
-    color: #f5f5f5;
-    transition: color 0.3s ease;
-  }
-  
-  .price-up {
-    color: #4caf50; /* Green for price increase */
-  }
-  
-  .price-down {
-    color: #f44336; /* Red for price decrease */
-  }
-  </style>
+
+<style scoped>
+.fx-display {
+  padding: 35px;
+  background-color: #3E6F50; /* Softer forest green for the main background */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: #F5FFFA; /* Mint cream for text */
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #F5FFFA; /* Mint cream for headings, adding a touch of lightness */
+}
+
+.prices-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.price-box {
+  background-color: #FFFFFF; /* Pure white for price boxes to ensure high contrast for readability */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 100px;
+}
+
+h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #3E6F50; /* A darker shade of green for subheadings */
+}
+
+p {
+  font-size: 1.8rem;
+  margin: 0;
+  font-weight: bold;
+  color: #4F7942; /* Softer forest green for price numbers, easy on the eyes */
+  transition: color 0.3s ease;
+}
+
+.price-up {
+  color: #76b041; /* A lighter, more pleasant green for price increases */
+}
+
+.price-down {
+  color: #cc4b37; /* A softer red for price decreases */
+}
+</style>
+
   

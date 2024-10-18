@@ -45,52 +45,53 @@
     },
   };
   </script>
-  
-  <style scoped>
-  .news-container {
-    padding: 20px;
-    background-color: #2c3e50;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    color: #fff;
-    width: 100%;
-    box-sizing: border-box;
-    overflow-y: auto;
-    max-height: 400px; /* Limit the height for better scrollability */
-  }
-  
-  h2 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    color: #f5f5f5;
-  }
-  
-  .news-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .news-item {
-    margin-bottom: 15px;
-  }
-  
-  .news-headline {
-    font-size: 1rem;
-    color: #9ec1e6;
-    text-decoration: none;
-    transition: color 0.3s;
-    display: block;
-  }
-  
-  .news-headline:hover {
-    color: #42b983;
-  }
-  
-  .loading {
-    font-size: 1rem;
-    text-align: center;
-    color: #ddd;
-  }
-  </style>
+
+<style scoped>
+.news-container {
+  padding: 20px;
+  background-color: #3E6F50; /* Softer forest green for the main background */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: #F5FFFA; /* Mint cream for text, ensuring readability */
+  width: 100%;
+  box-sizing: border-box;
+  overflow-y: auto;
+  max-height: 400px; /* Limit the height for better scrollability */
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #F5FFFA; /* Mint cream for headings, adding a touch of lightness */
+}
+
+.news-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.news-item {
+  margin-bottom: 15px;
+}
+
+.news-headline {
+  font-size: 1rem;
+  color: #FFFFFF; /* White for headlines, maintaining high contrast */
+  text-decoration: none;
+  transition: color 0.3s;
+  display: block;
+}
+
+.news-headline:hover {
+  color: #76b041; /* A lighter, more pleasant green for hover effects */
+}
+
+.loading {
+  font-size: 1rem;
+  text-align: center;
+  color: #ddd; /* Light grey for loading messages, subtle and non-intrusive */
+}
+</style>
+
   

@@ -229,66 +229,66 @@ export default {
 };
 </script>
 
-  <style scoped>
-  .currency-pair-selector {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    padding: 20px;
-    background-color: #2c3e50;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 100%;
-    box-sizing: border-box;
-    justify-content: center;
-    align-items: center; /* Align all items vertically */
-  }
+<style scoped>
+.currency-pair-selector {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding: 20px;
+  background-color: #3E6F50; /* Softer forest green for the main background */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center; /* Align all items vertically */
+}
 
-  .currency-input {
-    background-color: #3a4a5c;
-    padding: 10px;
-    border-radius: 8px;
-    border: 1px solid #444;
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
-    display: flex;
-    align-items: center;
-  }
+.currency-input {
+  background-color: #F5FFFA; /* Mint cream for input fields */
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #3E6F50; /* A darker green for borders */
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+}
 
-  .currency-dropdown {
-    background-color: transparent;
-    border: none;
-    color: #fff;
-    font-size: 1rem;
-    padding: 5px;
-    outline: none;
-    cursor: pointer;
-    border-radius: 5px;
-    min-width: 200px; /* Set a minimum width to keep the dropdown wide enough */
-  }
+.currency-dropdown {
+  background-color: #F5FFFA; /* Mint cream for dropdown */
+  border: 1px solid #3E6F50; /* Dark green border for more definition */
+  color: #4F7942; /* Text color as softer forest green */
+  font-size: 1rem;
+  padding: 5px;
+  outline: none;
+  cursor: pointer;
+  border-radius: 5px;
+  min-width: 200px; /* Set a minimum width to keep the dropdown wide enough */
+}
 
-  .currency-dropdown option {
-    color: black; /* Set the text color of dropdown options */
-  }
+.currency-dropdown option {
+  color: black; /* Maintain black for dropdown options for better visibility */
+}
 
-  /* Styling for the fetch button */
-  .fetch-button {
-    background-color: transparent;
-    border: 2px solid #9ec1e6;
-    color: #9ec1e6;
-    padding: 10px 20px;
-    border-radius: 8px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-  }
+/* Styling for the fetch button */
+.fetch-button {
+  background-color: transparent;
+  border: 2px solid #7c9c94; /* Dark green border */
+  color: #7c9c94; /* Dark green text */
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
 
-  .fetch-button:hover {
-    background-color: #4caf50;
-    color: #2c3e50;
-  }
+.fetch-button:hover {
+  background-color: #F5FFFA; /* Mint cream on hover */
+  color: #3E6F50; /* Darker green text when hovered for high contrast */
+}
 
-  .fetch-button:focus {
-    outline: none;
-    box-shadow: 0 0 5px #9ec1e6;
-  }
-  </style>
+.fetch-button:focus {
+  outline: none;
+  box-shadow: 0 0 5px #50424e; /* Focus shadow in darker green */
+}
+</style>

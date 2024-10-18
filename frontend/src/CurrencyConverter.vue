@@ -67,69 +67,70 @@
     },
   };
   </script>
-  
-  <style scoped>
-  .converter-container {
-    padding: 20px;
-    background-color: #2c3e50;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    color: #fff;
-    width: 100%;
-    box-sizing: border-box;
-  }
-  
-  h2 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    color: #f5f5f5;
-  }
-  
-  .conversion-details {
-    margin-bottom: 20px;
-    font-size: 1rem;
-    color: #9ec1e6;
-    text-align: center;
-  }
-  
-  .conversion-inputs {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-  
-  .input-group {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  
-  .amount-input {
-    flex: 1;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #444;
-    background-color: #3a4a5c;
-    color: white;
-    outline: none;
-    font-size: 1rem;
-    width: 100%;
-  }
-  
-  .converted-amount {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 1.2rem;
-    color: #9ec1e6;
-    background-color: #3a4a5c;
-    padding: 10px;
-    border-radius: 5px;
-  }
-  
-  .currency-label {
-    font-size: 1rem;
-    color: #ddd;
-  }
-  </style>
+
+<style scoped>
+.converter-container {
+  padding: 20px;
+  background-color: #3E6F50; /* A softer, more pleasant shade of forest green */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #f5f5f5; /* Keeping it slightly off-white for the heading */
+}
+
+.conversion-details {
+  margin-bottom: 20px;
+  font-size: 1rem;
+  color: #F5FFFA; /* Mint cream, a very light and soothing color for text */
+  text-align: center;
+}
+
+.conversion-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.amount-input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #3E6F50; /* A slightly darker, complementary shade of green for borders */
+  background-color: #F5FFFA; /* Mint cream for the input background, providing a neutral and soft backdrop */
+  color: #4F7942; /* Echoing the main forest green for text, for readability and design coherence */
+  outline: none;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.converted-amount {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  color: #4F7942; /* Using the main forest green here for consistency */
+  background-color: #FFFDD0; /* Mint cream background for output area */
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.currency-label {
+  font-size: 1rem;
+  color: #3E6F50; /* A complementary darker green for labels to maintain aesthetic balance */
+}
+</style>
+
   
