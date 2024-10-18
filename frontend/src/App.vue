@@ -6,7 +6,7 @@ import './assets/main.css'
     </header>
     <main class="dashboard-content">
       <div class="currencypairselector">
-        <CurrencyPairSelector :pairs="currencyPairs" @pairSelected="setSelectedPair" />
+        <CurrencyPairSelector :pairs="currencyPairs" @pairSelected="setSelectedPair"/>
       </div>
       <div class="top-row">
         <div class="tile small">

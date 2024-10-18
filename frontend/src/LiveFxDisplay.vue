@@ -29,7 +29,7 @@
     },
     mounted() {
       this.fetchPrices();
-      setInterval(this.fetchPrices, 5000); // Update every 5 seconds
+      setInterval(this.fetchPrices, 1000); //updates every one second 
     },
     methods: {
       fetchPrices() {
