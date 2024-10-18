@@ -1,6 +1,6 @@
 <template>
     <div class="news-container">
-      <h2>Live World News</h2>
+      <h2>Forex News</h2>
       <div v-if="news.length">
         <ul class="news-list">
           <li v-for="(article, index) in news" :key="index" class="news-item">
@@ -35,7 +35,7 @@
         try {
           // Replace this with your actual news API endpoint and parameters
           const response = await axios.get(
-            `https://newsapi.org/v2/top-headlines?category=general&language=en&pageSize=5&apiKey=${this.apiKey}`
+            `https://newsapi.org/v2/everything?q=forex&language=en&pageSize=5&apiKey=${this.apiKey}`
           );
           this.news = response.data.articles;
         } catch (error) {
