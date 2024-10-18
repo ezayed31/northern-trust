@@ -4,11 +4,13 @@ import './assets/main.css'
     <header class="header">
       <h1>Dashboard</h1>
     </header>
-    <CurrencyPairSelector :pairs="currencyPairs" @pairSelected="setSelectedPair" />
     <main class="dashboard-content">
+      <div class="currencypairselector">
+        <CurrencyPairSelector :pairs="currencyPairs" @pairSelected="setSelectedPair" />
+      </div>
       <div class="top-row">
         <div class="tile small">
-          <p>palceholder</p>
+          
         </div>
         <div class="tile small">
           <LiveFxDisplay :pair="selectedPair" />
