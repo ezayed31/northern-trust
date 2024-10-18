@@ -44,7 +44,7 @@ export default {
   data() {
     return {
       currencyPairs: ['USD/EUR', 'USD/JPY', 'GBP/USD', 'AUD/USD', 'EUR/GBP', 'USD/CHF'],
-      selectedPair: 'USD/JPY',
+      selectedPair: 'USD/EUR',
       selectedBaseCurrency: 'USD',
       selectedTargetCurrency: 'EUR',
     };
